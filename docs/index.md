@@ -1,5 +1,5 @@
 <head>
-      <title>Stephanie Ventura</title>
+      
 </head>
 
 <body>
