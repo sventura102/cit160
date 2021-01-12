@@ -1,6 +1,3 @@
-<!doctype html>
-<html lang="en-us">
-
 <head>
       <title>Stephanie Ventura</title>
 </head>
