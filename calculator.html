@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Week 6: Simple Calculator</title>
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1> Stephanie Ventura</h1>
+            <h2>Simple Calculations</h2>
+        </header>
+        <main>
+            <h3>Enter Your Calculations</h3>
+            <input placeholder="Enter First Number" type="text" id="number1" />
+            <select name="operator" id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input placeholder="Enter Second Number" type="text" id="number2" />
+            <input placeholder="Answer" type="text" id="answer" />
+            <label><button onclick="checkAnswer()">Check Answer</button></label>
+            <hr/>
+            <p><span id='output'></span></p>
+        </main>
+        <footer>
+            &copy; 2021 &bull; Stephanie Ventura &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script src="js/calculator.js"></script>
+    </body>
+</html>
