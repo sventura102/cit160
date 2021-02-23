@@ -1,4 +1,4 @@
-function Alarm() {
+function getAlarm() {
     //Input - Get the month, day of the months, and day of the week from the computer.
     let now = new Date
     let month = now.getMonth();
