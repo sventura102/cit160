@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Week 8: Sum Up The Odds</title>
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>Week 8: Sum Up The Odds</h1>
+            <h2>Stephanie Ventura</h2>
+        </header>
+        <main>
+            <h3>Sum Up The Odds</h3>
+            <label>Enter a number: <input type="text" id="number" /></label>
+            <label><button onclick='sumOdds()'>Sum</button></label>
+            <hr/>
+            <p><span id='output'></span></p>
+        </main>
+        <footer>
+            &copy;2019 &bull;Stephanie Ventura &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function sumOdds() {
+            //Input - Get the value input from user and assign odd variable
+            let number = parseFloat(document.getElementById('number').value);
+            let oddSum = 0;
+            //Processing - Run until the program gets the the number input.
+            for (let i = 1; i <= number; i++) {
+                if (i % 2 !== 0) {
+                    oddSum = oddSum + i;
+                }
+             }       
+            //Output - Display the sum off all the numbers.
+            document.getElementById('output').innerHTML = `If the user entered ${number}, the sum of the odd numbers would be ${oddSum}`
+        }
+        </script>
+    </body>
+</html>
