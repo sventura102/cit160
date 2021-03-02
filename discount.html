@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Week 7: Sales Conditional Discount</title>
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>Stephanie Ventura</h1>
+            <h2>Week 7: Sales Conditional Discount</h2>
+        </header>
+        <main>
+            <h3>Sales Conditional Discount</h3>
+            <label>Enter subtotal: <input type="text" id="subtotal" /></label>
+            <label><button onclick="getDiscount()">Get Total</button></label>
+            <hr/>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull;Stephanie Ventura &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function getDiscount() {
+            //Input - Get the subtotal from user and get day of the week from computer.
+            let subtotal = parseFloat(document.getElementById('subtotal').value);
+            let dayOfWeek = new Date().getDay();
+            let total;
+
+            //Processing - Multiply to get total of discount and sales tax. Add sales tax, subtract discount as needed.
+             if ((dayOfWeek == 2 || dayOfWeek == 3) && subtotal > 50) {
+                subtotal = subtotal - (subtotal * .10);
+                total = subtotal + (subtotal * .06);
+            }
+            else {
+                total = subtotal + (subtotal * .06);
+         }
+            //Output
+            document.getElementById("output").innerHTML = `$${total.toFixed(2)}`;
+        }
+        </script>      
+    </body>
+</html>
