@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Week 9: Times Table using Repetition</title>
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>Week 9: Times Table using Repetition</h1>
+            <h2>Stephanie Ventura</h2>
+        </header>
+        <main>
+            <h3>Time Table by Fives</h3>
+            <label><button onclick="fiveTimes()">Show Times Table</button></label>
+            <hr/>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2019 &bull;Stephanie Ventura &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function fiveTimes() {
+            //Input
+            let text = "";
+            let i;
+            multiple = 5
+            //Processing
+            for (i = 1; i <= 12; i++) {
+                text += "5 x " + i + " = " + (i * multiple) + "<br>";
+            }
+            //Output
+            document.getElementById("output").innerHTML = text;
+        }
+            
+        </script>
+    </body>
+</html>
