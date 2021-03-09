@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>To The Power</title>
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>To The Power Of</h1>
+            <h2>Stephanie Ventura</h2>
+        </header>
+        <main>
+            <h3>Power</h3>
+            <label><button onclick="power()">Display Numbers</button></label>
+            <hr/>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2019 &bull;Stephanie Ventura &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function power(){ 
+            //Input
+            let text = "";
+        let i = 2;
+        let power = 0
+        //Processing
+        for (power = 0; power <= 31; power++) {
+            text +=  Math.pow(i, power) + ", ";
+            }
+            //Output
+            document.getElementById("output").innerHTML = text;
+            }
+        </script>
+    </body>
+</html>

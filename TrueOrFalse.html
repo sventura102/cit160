@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>True or False</title>
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>True or False</h1>
+            <h2>Stephanie Ventura</h2>
+        </header>
+        <main>
+            <p>Please enter two numbers:</p>
+            <input type="text" id="one">
+            <input type="text" id="two">
+            <label><button type="button" onclick="truefalse()">True or False</button></label>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2019 &bull;Stephanie Ventura &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+                //input
+                let number1 = parseFloat(document.getElementById("one").value);
+                let number2 = parseFloat(document.getElementById("two").value);
+                let result;
+
+                //processing
+                if (number1 > 5 && number2 > 5 || number1 + number2 == 20) {
+                    result = "True"
+                }
+                else {
+                    result = "False"
+                }
+                //output
+                document.getElementById("output").innerHTML = `${result}`;
+        </script>
+    </body>
+</html>

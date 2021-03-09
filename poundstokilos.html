@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Pounds to Kilograms</title>
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>Week 5: Convert Pounds to Kilograms</h1>
+            <h2>Stephanie Ventura</h2>
+        </header>
+        <main>
+            <h3>Convert Pounds to Kilograms</h3>
+            <label>Pounds: <input type="text" id="pounds"/></label>
+            <label><button onclick="multiplyBy()">Convert</button></label>
+            <hr/>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy; 2021 &bull; Stephanie Ventura &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function multiplyBy() {
+                //INPUT - user enters pounds into text field
+                let pounds = parseFloat(document.getElementById('pounds').value)
+                //PROCESSING - k = p * 0.45359237
+                let kilograms = pounds * 0.45359237;
+                let digits = 1;
+                let multiplier = Math.pow(10, digits);
+                kilograms = Math.round(kilograms * multiplier) / multiplier;
+                //OUTPUT - kilograms appears below the text field
+                document.getElementById('output').innerHTML = `${kilograms} kg`;
+            }
+
+    </script>
+    </body>
+</html>

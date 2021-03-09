@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Divide Evenly</title>
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>Divide Evenly</h1>
+            <h2>Enter two numbers and then a divisor. </h2>
+        </header>
+        <main>
+            <p>Choose two numbers:</p>
+            <input type="text" id="start">
+            <input type="text" id="end">
+            <p>Enter a divisor:</p>
+            <input type="text" id="div">
+            <label><button type="button" onclick="evenDivide()">Divide Evenly</button></label>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2019 &bull;Stephanie Ventura &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function evenDivide() {
+                //input 
+                let start = parseFloat(document.getElementById("start").value);
+                let end = parseFloat(document.getElementById("end").value);
+                let division = parseFloat(document.getElementById("div").value);
+                let display = "";
+                //processing
+                for (i = start; i <= end; i++) {
+                if (i % division == 0) {
+                    display += i + " ";
+                    } 
+                }
+                //output
+                document.getElementById("output").innerHTML = `${display}`;
+                
+            } 
+        </script>
+    </body>
+</html>    
