@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Week 9: Function With Parameters</title>   
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1>Week 9: Function With Parameters</h1>
+            <h2>Stephanie Ventura</h2>
+        </header>
+        <main>
+            <h3>Windchill</h3>
+            <label>Temperature: <input type="text" id="Temperature"></label>
+            <label>Wind Chill: <input type="text" id="WindChill"></label>
+            <label><button type="button" onclick="doInputOutput()">Wind Chill</button></label>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy; 2021 &bull; Stephanie Ventura &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function doInputOutput() {
+                //input
+                let temperature = parseFloat(document.getElementById("Temperature").value);
+                let windspeed = parseFloat(document.getElementById("WindChill").value);
+                //output
+                if (!(temperature < 50) && !(windspeed > 3)) {
+                let windchill = windChill(temperature, windspeed);
+                document.getElementById("output").innerHTML = `${windchill}`;
+                }
+            function windChill(fahrenheit, mph) {
+                return 35.74 + (0.6215 * fahrenheit) - (35.75 * mph ** 0.16) + (0.4275 * fahrenheit * (mph ** 0.16));
+                }
+            }
+        </script>
+    </body>
+</html>
