@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Week 11: Investment Calculator</title>   
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1>Week 11: Investment Calculator</h1>
+            <h2>Stephanie Ventura</h2>
+        </header>
+        <main>
+            <h3>Investment Calculator</h3>
+            <label>Amount invested: <input type="text" id="principal"></label>
+            <label>Annual Rate: <input type="text" id="annualRate"></label>
+            <label>Number of years: <input type="text" id="years"></label>
+            <label>Periods per year: <input type="text" id="periodsPerYear"></label>
+            <label><button type="button" onclick="doFV()">Compute Future Value</button></label>
+            <p><span id="output"></p>
+        </main>
+        <footer>
+            &copy; 2021 &bull; Stephanie Ventura &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function doFV(){
+                //input
+                let principal = parseFloat(document.getElementById("principal").value);
+                let annualRate = parseFloat(document.getElementById("annualRate").value);
+                let years = parseFloat(document.getElementById("years").value);
+                let periodsPerYear = parseFloat(document.getElementById("periodsPerYear").value);
+                //processing
+                let futureValue = computeFutureValue(principal, annualRate, years, periodsPerYear);
+                //output
+                document.getElementById("output").innerHTML = `$${futureValue}`;
+
+            }
+            function computeFutureValue(a, r, n, p) {
+                let f = a * Math.pow(1 + r / p, n * p);
+                return f.toFixed(2);
+            }
+        </script>
+    </body>
+</html>
